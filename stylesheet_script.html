@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스타일시트와 스크립트</title>
+
+</head>
+<body bgcolor = "orange" text="white">
+    <!-- 상태 경로-->
+    <p><a href="./index.html" target="_blank">강아지 사진</a></p> <!-- target을 사용하면 새로운창에서 열림. 없으면 현재창에서 바뀜..-->
+    <!-- 절대경로를 이용해 링크 생성-->
+    <a href="https://dxdata.tistory.com" target="_blank">DX DATA 블로그 주소</a>
+
+ 
+    
+    <h1 class="redarea">안녕하세요 DX DATA 지망생입니다</h1>
+    </br>
+    <h2>저에 대해 소개하고 싶네요</h2></br>
+    <img src="./img/lg image.png" width="400" height="280"><img src="./img/dxdata.jpg" width="400" height="280">
+    <h3>
+    <ol>
+        <li>
+            LG헬로비전 DX DATA SCHOOL 1기
+            
+        </li>
+        <li>취준</li>
+        <br><h4>현재 취업을 준비하며 공부하는 학생입니다.</br> 
+        DX DATA와 AI에 관심이 있어 학습하고 있습니다.</h4></br>
+    </ol></h3>
+    <br>
+    <p class="redarea">여러분은 어떤가요?</p>
+    <p id="adam">클릭을 눌러 여러분의 이야기를 들려주세요</p>
+    <br>
+    <button id="btn">클릭</button>
+    <script>
+        document.getElementById("btn").addEventListener(
+            "click", function(e){
+                document.getElementById("adam").innerHTML="메롱" 
+            }
+        )
+   
+    </script>
+<!-- 3이렇게 하면 innerHTML으로 바꾼다는 내용임, script에 나오는 id 가 위에 먼저 나와야 한다. -->
+<!-- 4스타일과 스크립트는 별도의 파일로 만드는 것이 좋다 but 두개를 읽을때는 어렵지만 유지보수엔 좋다-->
+    <style>
+        .redarea{
+            color : black;
+        }
+    </style> <!-- 2하지만 파악할때엔 실제 적용 되는 곳 아래가 좋다. 취향-->
+</body>
+</html>
+<!-- 1스타일 시트는 전체 읽혀진 후 적용되므로, redarea가 뒤에 있더라도 적용이 됨-->
